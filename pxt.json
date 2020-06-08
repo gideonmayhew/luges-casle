@@ -1,16 +1,17 @@
 {
     "name": "luges casle",
-    "dependencies": {
-        "device": "*"
-    },
     "description": "",
+    "dependencies": {
+        "device": "*",
+        "arcade-sprite-data": "github:microsoft/arcade-sprite-data#v0.0.5"
+    },
     "files": [
         "main.blocks",
         "main.ts",
         "README.md"
     ],
-    "preferredEditor": "blocksprj",
     "testFiles": [
         "test.ts"
-    ]
+    ],
+    "preferredEditor": "blocksprj"
 }
