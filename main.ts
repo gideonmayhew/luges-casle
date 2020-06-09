@@ -4,6 +4,7 @@ namespace SpriteKind {
     export const shadow = SpriteKind.create()
     export const ghost = SpriteKind.create()
     export const sucker = SpriteKind.create()
+    export const boss1 = SpriteKind.create()
 }
 namespace myTiles {
     //% blockIdentity=images._tile
@@ -25,25 +26,139 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `
+    //% blockIdentity=images._tile
+    export const tile1 = img`
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c c 
+`
+    //% blockIdentity=images._tile
+    export const tile2 = img`
+b b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b b 
+2 b b b b b b b b b b b 2 b b b 
+2 b b b 2 2 b b b b b b 2 b b b 
+2 b b b 2 b b 2 b b b 2 2 b 2 2 
+2 b b b 2 2 b 2 b b b 2 2 b b b 
+2 b b b 2 b b b 2 b 2 b 2 b b b 
+2 2 2 b 2 2 b b b 2 b b 2 2 2 b 
+b b b b b b b b b b b b b b b b 
+b 2 2 b b b b b 2 b b b b b b b 
+b 2 b b b b b b 2 2 b b b b b b 
+b 2 2 b b b b b 2 b b b b b b b 
+b 2 2 b b b b b 2 b b b b b b b 
+b 2 b b b b b b 2 b b b b b b b 
+b 2 2 b b b b 2 2 2 b b b b b b 
+b b b b b b b b b b b b b b b b 
+`
+    //% blockIdentity=images._tile
+    export const tile3 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`
+    //% blockIdentity=images._tile
+    export const tile4 = img`
+b b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b b 
+2 b b b b b b b b b b b 2 b b b 
+2 b b b 2 2 b b b b b b 2 b b b 
+2 b b b 2 b b 2 b b b 2 2 b 2 2 
+2 b b b 2 2 b 2 b b b 2 2 b b b 
+2 b b b 2 b b b 2 b 2 b 2 b b b 
+2 2 2 b 2 2 b b b 2 b b 2 2 2 b 
+b b b b b b b b b b b b b b b b 
+b 2 2 b b b b 2 2 b b b b b b b 
+b 2 b b b b 2 b b 2 b b b b b b 
+b 2 2 b b b b b b 2 b b b b b b 
+b 2 2 b b b b b 2 b b b b b b b 
+b 2 b b b b 2 2 2 2 b b b b b b 
+b 2 2 b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b b 
+`
+    //% blockIdentity=images._tile
+    export const tile5 = img`
+b b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b b 
+2 b b b b b b b b b b b 2 b b b 
+2 b b b 2 2 b b b b b b 2 b b b 
+2 b b b 2 b b 2 b b b 2 2 b 2 2 
+2 b b b 2 2 b 2 b b b 2 2 b b b 
+2 b b b 2 b b b 2 b 2 b 2 b b b 
+2 2 2 b 2 2 b b b 2 b b 2 2 2 b 
+b b b b b b b b b b b b b b b b 
+b 2 2 b b b b b 2 b b b b b b b 
+b 2 b b b b b 2 b b b b b b b b 
+b 2 2 b b b b 2 b b b b b b b b 
+b 2 2 b b b b b 2 b b b b b b b 
+b 2 b b b b b 2 b b b b b b b b 
+b 2 2 b b b b 2 b b b b b b b b 
+b b b b b b b b 2 b b b b b b b 
+`
+    //% blockIdentity=images._tile
+    export const tile6 = img`
+b b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b b 
+2 b b b b b b b b b b b 2 b b b 
+2 b b b 2 2 b b b b b b 2 b b b 
+2 b b b 2 b b 2 b b b 2 2 b 2 2 
+2 b b b 2 2 b 2 b b b 2 2 b b b 
+2 b b b 2 b b b 2 b 2 b 2 b b b 
+2 2 2 b 2 2 b b b 2 b b 2 2 2 b 
+b b b b b b b b b b b b b b b b 
+b 2 2 b b b 2 b b 2 b b b b b b 
+b 2 b b b b 2 b b 2 b b b b b b 
+b 2 2 b b b 2 b b 2 b b b b b b 
+b 2 2 b b b 2 2 2 2 2 b b b b b 
+b 2 b b b b b b b 2 b b b b b b 
+b 2 2 b b b b b b 2 b b b b b b 
+b b b b b b b b b 2 b b b b b b 
+`
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.setImage(img`
-. . . . . 7 7 7 7 7 . . . . . . . . 
-. . . . 7 7 7 7 7 7 7 7 7 . . . . . 
-. . . . e e e d d f d . . . . . . . 
-. . . e d e d d d f d d d . . . . . 
-. . . e d e e d d d f d d d . . . . 
-. . . e e d d d d f f f f . . . . . 
-. . . . . d d d d d d d . . . . . . 
-. . 2 2 7 7 8 7 7 7 . . . . . . . . 
-. 2 2 7 7 7 8 7 7 8 7 7 7 . . . . . 
-. 2 7 7 7 7 8 7 7 8 7 7 7 7 . . . b 
-. 2 1 1 7 8 5 8 8 5 8 7 1 1 . . b b 
-f 2 1 1 1 8 8 8 8 8 8 b b b b b b b 
-f 2 1 1 8 8 8 8 8 8 8 8 . . . . b b 
-f 2 2 2 8 8 8 8 8 8 8 8 . . . . . b 
-. . . e e e . . . . e e e . . . . . 
-. . e e e e . . . . e e e e . . . . 
+. . . . . 7 7 7 7 7 . . . . . . 
+. . . . 7 7 7 7 7 7 7 7 7 . . . 
+. . . . e e e d d f d . . . . . 
+. . . e d e d d d f d d d . . . 
+. . . e d e e d d d f d d d . . 
+. . . e e d d d d f f f f . . . 
+. . . . . d d d d d d d . . . . 
+. . 2 2 7 7 8 7 7 7 . . . . . . 
+. 2 2 7 7 7 8 7 7 8 7 7 7 . . . 
+. 2 7 7 7 7 8 7 7 8 7 7 7 7 . b 
+. 2 1 1 7 8 5 8 8 5 8 7 1 1 b b 
+f 2 1 1 1 8 8 8 8 8 8 b b b b b 
+f 2 1 1 8 8 8 8 8 8 8 8 . . b b 
+f 2 2 2 8 8 8 8 8 8 8 8 . . . b 
+. . . e e e . . . . e e e . . . 
+. . e e e e . . . . e e e e . . 
 `)
     mySprite.image.flipX()
     x = true
@@ -71,7 +186,133 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.doorOpenSouth, function (
 . . . . . . . . . . . . . 7 7 . . 
 `, SpriteKind.ghost)
         tiles.placeOnTile(ghost, value)
+        ghost.follow(mySprite, 40)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorDark4, function (sprite, location) {
+    tiles.setTileAt(location, sprites.dungeon.floorLight0)
+    for (let value of tiles.getTilesByType(sprites.dungeon.floorLight5)) {
+        ghost = sprites.create(img`
+. . . . . . . 7 7 7 . . . . . . . 
+. . . . . . 7 7 7 7 7 . . . . . . 
+. . . . . 7 7 6 7 6 7 7 . . . . . 
+. . . . . 7 7 6 7 6 7 7 . . . . . 
+. . . . . 7 7 7 7 7 7 7 . . . . . 
+. . . . . . 7 6 6 6 7 . . . . . . 
+. . . 7 7 7 7 7 7 7 7 7 7 . . . . 
+. 7 7 7 7 7 7 7 7 7 7 7 7 7 . . . 
+7 7 . 7 7 7 7 7 7 7 7 7 7 7 7 7 . 
+7 7 . 7 7 7 7 7 7 7 7 . . . . 7 . 
+. . . 7 7 7 7 7 7 7 7 7 . . 7 7 . 
+. . . . . . 7 7 7 7 7 7 7 7 . . . 
+. . . . . . 7 7 7 7 7 7 7 7 7 . . 
+. . . . . . . . 7 7 7 7 7 7 7 . . 
+. . . . . . . . . . 7 7 7 7 7 . . 
+. . . . . . . . . . . 7 7 7 7 . . 
+. . . . . . . . . . . . . 7 7 . . 
+`, SpriteKind.ghost)
+        tiles.placeOnTile(ghost, value)
         ghost.follow(mySprite, 50)
+    }
+})
+sprites.onOverlap(SpriteKind.sucker, SpriteKind.boss1, function (sprite, otherSprite) {
+    if (sprites.readDataBoolean(otherSprite, "life")) {
+        otherSprite.destroy()
+        tiles.setTilemap(tiles.createTilemap(
+            hex`100010000a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a020202020202020202020202020202030404040404040404040404040404040904040404040404040404040404040409010101010101010101010101040404090a0a0a0a0a0a0a0a0a0a0a0a080404090a0a0a0a0a0a0a0a0a0a0a0a080404090a0a0a0a0a0a0a0a0a0a0a0a080404090c0b0b0b0b0b0b0b0b0b0b0b0a0a0a0a0d0a0d140d130a0d0a0a120d100a0a0a0d0a0d0a0d0a0a0d0a0a0a0d0a0a0a0a0e0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f`,
+            img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 . . . . 
+2 . 2 . 2 . . 2 . . . . . . . . 
+2 . 2 . 2 . . 2 . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,sprites.castle.tilePath8,sprites.castle.tilePath2,sprites.castle.tilePath3,sprites.castle.tilePath5,sprites.castle.tilePath1,sprites.castle.tilePath9,sprites.castle.tilePath7,sprites.castle.tilePath4,sprites.castle.tilePath6,myTiles.tile1,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouth0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6],
+            TileScale.Sixteen
+        ))
+    } else {
+        pause(1000)
+        info.changeLifeBy(-2)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorDark1, function (sprite, location) {
+    tiles.setTileAt(location, sprites.dungeon.floorDark1)
+    game.splash("boss fight")
+    for (let value of tiles.getTilesByType(sprites.dungeon.floorDark1)) {
+        ghost = sprites.create(img`
+. . . . . . . . . . . . . . . . . 
+. . . . . 4 f 4 4 4 4 f . . . . . 
+. . . . . 4 4 f 4 4 f 4 . . . . . 
+. . . . . 4 4 f 4 4 f 4 4 . . . . 
+. . . . . 4 4 4 4 4 4 4 4 . . . . 
+. . . . . 4 4 f f f f 4 4 . . . . 
+. . . . . . 4 4 4 4 4 4 4 . . . . 
+. 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 . 4 4 
+4 4 . . 4 4 4 4 4 4 4 4 4 4 . 4 4 
+4 4 . . 4 4 4 4 4 4 4 4 4 . . 4 4 
+4 4 4 . 4 4 4 4 4 4 4 4 . . 4 4 4 
+. 4 4 . 4 4 4 4 4 4 . . . . 4 4 . 
+. . . . . 4 4 4 4 4 . . . . . . . 
+. . . . . . 4 4 4 4 . . . . . . . 
+. . . . . . 4 4 4 4 4 . . . . . . 
+. . . . . . . 4 4 4 4 4 . . . . . 
+`, SpriteKind.boss1)
+        tiles.placeOnTile(ghost, value)
+        ghost.follow(mySprite, 50)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        tiles.setTilemap(tiles.createTilemap(
+            hex`1e001e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000707070707070707070c0e0e0e0e0e0e0c141414140000000000000000000d17171717171717170a17151717141217171712140000000000000000000d17171717171717170a17151717141214141717140000000000000000000e17171717171717170a17151717141214141717140000000000000000000d17171717171717170a17151717141217171712140000000000000000000808080808080808080b0f0f0f0f0f0f0b14141414000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . 
+2 . . . . . . . . 2 . . . . 2 2 . . . . 2 . . . . . . . . . 
+2 . . . . . . . . 2 . . . . 2 2 2 2 . . 2 . . . . . . . . . 
+2 . . . . . . . . . . . . . 2 2 2 2 . . 2 . . . . . . . . . 
+2 . . . . . . . . 2 . . . . 2 2 . . . . 2 . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+`,
+            [myTiles.tile0,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenInnerSouthEast,sprites.dungeon.greenInnerNorthEast,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.greenOuterNorth2,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterEast1,sprites.dungeon.floorLight5,sprites.dungeon.floorLight3,sprites.dungeon.darkGroundSouthWest1,sprites.dungeon.darkGroundSouthEast1,sprites.dungeon.floorLight1,sprites.dungeon.floorLight0],
+            TileScale.Sixteen
+        ))
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 7))
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.fash, function (sprite, otherSprite) {
@@ -123,31 +364,42 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.coin, function (sprite, otherSpr
     otherSprite.destroy()
     info.changeScoreBy(1)
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.doorOpenNorth, function (sprite, location) {
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(13, 11))
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.setImage(img`
-. . . . . 7 7 7 7 7 . . . . . . . . 
-. . . . 7 7 7 7 7 7 7 7 7 . . . . . 
-. . . . e e e d d f d . . . . . . . 
-. . . e d e d d d f d d d . . . . . 
-. . . e d e e d d d f d d d . . . . 
-. . . e e d d d d f f f f . . . . . 
-. . . . . d d d d d d d . . . . . . 
-. . 2 2 7 7 8 7 7 7 . . . . . . . . 
-. 2 2 7 7 7 8 7 7 8 7 7 7 . . . . . 
-. 2 7 7 7 7 8 7 7 8 7 7 7 7 . . . b 
-. 2 1 1 7 8 5 8 8 5 8 7 1 1 . . b b 
-f 2 1 1 1 8 8 8 8 8 8 b b b b b b b 
-f 2 1 1 8 8 8 8 8 8 8 8 . . . . b b 
-f 2 2 2 8 8 8 8 8 8 8 8 . . . . . b 
-. . . e e e . . . . e e e . . . . . 
-. . e e e e . . . . e e e e . . . . 
+. . . . . 7 7 7 7 7 . . . . . . 
+. . . . 7 7 7 7 7 7 7 7 7 . . . 
+. . . . e e e d d f d . . . . . 
+. . . e d e d d d f d d d . . . 
+. . . e d e e d d d f d d d . . 
+. . . e e d d d d f f f f . . . 
+. . . . . d d d d d d d . . . . 
+. . 2 2 7 7 8 7 7 7 . . . . . . 
+. 2 2 7 7 7 8 7 7 8 7 7 7 . . . 
+. 2 7 7 7 7 8 7 7 8 7 7 7 7 . b 
+. 2 1 1 7 8 5 8 8 5 8 7 1 1 b b 
+f 2 1 1 1 8 8 8 8 8 8 b b b b b 
+f 2 1 1 8 8 8 8 8 8 8 8 . . b b 
+f 2 2 2 8 8 8 8 8 8 8 8 . . . b 
+. . . e e e . . . . e e e . . . 
+. . e e e e . . . . e e e e . . 
 `)
     x = false
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.ghost, function (sprite, otherSprite) {
+    if (sprites.readDataBoolean(otherSprite, "life")) {
+        pause(100)
+    } else {
+        pause(1000)
+        info.changeLifeBy(-1)
+    }
+})
 sprites.onOverlap(SpriteKind.fash, SpriteKind.ghost, function (sprite, otherSprite) {
-    ghost.follow(mySprite, 0)
-    ghost.setVelocity(0, 0)
-    ghost.setImage(img`
+    otherSprite.follow(mySprite, 0)
+    otherSprite.setVelocity(0, 0)
+    otherSprite.setImage(img`
 . . . . . . . 1 1 1 . . . . . . . 
 . . . . . . 1 1 1 1 1 . . . . . . 
 . . . . . 1 1 d 1 d 1 1 . . . . . 
@@ -166,10 +418,10 @@ sprites.onOverlap(SpriteKind.fash, SpriteKind.ghost, function (sprite, otherSpri
 . . . . . . . . . . . 1 1 1 1 . . 
 . . . . . . . . . . . . . 1 1 . . 
 `)
-    sprites.setDataBoolean(ghost, "life", true)
+    sprites.setDataBoolean(otherSprite, "life", true)
     pause(500)
-    sprites.setDataBoolean(ghost, "life", false)
-    ghost.setImage(img`
+    sprites.setDataBoolean(otherSprite, "life", false)
+    otherSprite.setImage(img`
 . . . . . . . 7 7 7 . . . . . . . 
 . . . . . . 7 7 7 7 7 . . . . . . 
 . . . . . 7 7 6 7 6 7 7 . . . . . 
@@ -188,11 +440,56 @@ sprites.onOverlap(SpriteKind.fash, SpriteKind.ghost, function (sprite, otherSpri
 . . . . . . . . . . . 7 7 7 7 . . 
 . . . . . . . . . . . . . 7 7 . . 
 `)
-    ghost.follow(mySprite, 50)
+    otherSprite.follow(mySprite, 50)
+})
+scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        tiles.setTilemap(tiles.createTilemap(
+            hex`32001e000201010101010101081212121212121100000000000000000000000000000000000000000000000000000000000000000000030a0a0a0a0a0a0a070a0a0a0a0a0a1000000000000000000000000000000000000000000000000000000000000000000000030a0a0a0a0a0a0a090a0a0a0a0a0a1000000000000000000000000000000000000000000000000000000000000000000000040e0e0505050505060a0a0a0a0a0a10000000000000000000000000000000000000000000000000000000000000000000000a0a0a0a0a0a0a0a070a0a0a0a0a0a10000000000000000000000000000000000000000000000000000000000000000000000a0a0a0a0a0a0a0a070a0a0a0a0a0a10000000000000000000000000000000000000000000000000000000000000000000000a0a0a0a0a0a0a0a070a0a0a0a0a0a10000000000000000000000000000000000000000000000000000000000000000000000a0a0a0a0a0a0a0a070a0a0a0a0a0a10000000000000000000000000000000000000000000000000000000000000000000000e05050505050505060e0e0e0e130e0f000000000000000000000000000000000000000000000000000000000000000000000a0a0a0a0a0c0a0a0a15191919191917000000000000000000000000000000000000000000000000000000000000000000000a0a0a0a0a0c0a0a0a15191919191917000000000000000000000000000000000000000000000000000000000000000000000a0a0a0a0a0c0a0a0a15191919191917000000000000000000000000000000000000000000000000000000000000000000000a0a0a0a0a0c0a0a0a18191919141917000000000000000000000000000000000000000000000000000000000000000000000a0a0a0a0a0c0a0a0a1519191919191700000000000000000000000000000000000000000000000000000000000000000000131313131313131313160e0e0e0e0e0e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000022101210121080d0d0d0d0d0d0d0d0d0d0d1100000000000000000000000000001a0d1d0d0d0d0d0d0d1e0d110000000000071b1b1b1b1c071c242424241c242424241c170000000000000000000000000000180c1b0c1b0c1b0c1b0c1c100000000000071b1b1b1b1b07240c2424240c2424240c24170000000000000000000000000000181b0c1b0c1b0c1b0c1b0c101000000000071b1b1b1b1b2024240c0c240c240c0c2424170000000000000000000000000000180c1b0c1b0c1b0c1b0c1b040505050505061b1b1b1b1b07242424240c0c0c24242424170000000000000000000000000000181b0c1b0c1b0c1b0c1b0c1b1b1b1b1b1b231b1b1b1b1c201c0c0c0c0c250c0c0c0c1c170000000000000000000000000000180c1b0c1b0c1b0c1b0c1b020101010101081b1b1b1b1b07242424240c0c0c24242424170000000000000000000000000000181b0c1b0c1b0c1b0c1b0c100000000000071b1b1b1b1b2024240c0c240c240c0c2424170000000000000000000000000000160e0e0e0e0e0e0e0e0e0e0f0000000000071b1b1b1b1b07240c2424240c2424240c241700000000000000000000000000000000000000000000000000000000000000071b1b1b1b1c071c242424241c242424241c1700000000000000000000000000000000000000000000000000000000000000041f051f051f060e0e0e0e0e0e0e0e0e0e0e0f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 . . . . . . . 2 . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 . . . . . . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 . . 2 2 2 2 2 2 . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . 2 . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . 2 . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . 2 . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . 2 . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . 2 . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . 2 . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . 2 . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . 2 . . . . . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . . . 
+. . 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . 2 . . . . . 2 . . . . . . . . . . . 2 . . . . . . . . . . . . 
+. . 2 . . . . . . . . . . 2 . . . . . 2 . . . . . 2 . . . . . . . . . . . 2 . . . . . . . . . . . . 
+. . 2 . . . . . . . . . . 2 . . . . . 2 . . . . . 2 . . . . . . . . . . . 2 . . . . . . . . . . . . 
+. . 2 . . . . . . . . . . 2 2 2 2 2 2 2 . . . . . 2 . . . . . . . . . . . 2 . . . . . . . . . . . . 
+. . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 . . . . . . . . . . . . 
+. . 2 . . . . . . . . . . 2 2 2 2 2 2 2 . . . . . 2 . . . . . . . . . . . 2 . . . . . . . . . . . . 
+. . 2 . . . . . . . . . . 2 . . . . . 2 . . . . . 2 . . . . . . . . . . . 2 . . . . . . . . . . . . 
+. . 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . 2 . . . . . 2 . . . . . . . . . . . 2 . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 2 . . . . . 2 . . . . . . . . . . . 2 . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+`,
+            [myTiles.tile0,sprites.dungeon.purpleOuterNorth1,sprites.dungeon.purpleOuterNorthWest,sprites.dungeon.purpleOuterWest1,sprites.dungeon.purpleOuterSouthEast,sprites.dungeon.purpleOuterSouth1,sprites.dungeon.purpleOuterSouthWest,sprites.dungeon.purpleOuterEast0,sprites.dungeon.purpleOuterNorthEast,sprites.dungeon.stairLarge,sprites.dungeon.floorDark2,sprites.dungeon.floorDark4,sprites.dungeon.floorDarkDiamond,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterSouth1,sprites.dungeon.doorOpenSouth,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterWest1,sprites.dungeon.floorLight2,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.floorLight0,sprites.dungeon.floorLight5,sprites.dungeon.doorOpenNorth,sprites.dungeon.doorClosedNorth,sprites.dungeon.doorLockedSouth,sprites.dungeon.doorLockedEast,sprites.dungeon.doorLockedNorth,sprites.dungeon.floorLight1,sprites.dungeon.floorDark0,sprites.dungeon.floorLight4,sprites.dungeon.floorDark1,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6],
+            TileScale.Sixteen
+        ))
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 5))
+    }
 })
 sprites.onOverlap(SpriteKind.sucker, SpriteKind.ghost, function (sprite, otherSprite) {
     if (sprites.readDataBoolean(otherSprite, "life")) {
         otherSprite.destroy()
+    } else {
+        pause(1000)
+        info.changeLifeBy(-1)
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.sucker, function (sprite, otherSprite) {
@@ -248,22 +545,22 @@ let x = false
 let mySprite2: Sprite = null
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
-. . . . . 7 7 7 7 7 . . . . . . . . 
-. . . . 7 7 7 7 7 7 7 7 7 . . . . . 
-. . . . e e e d d f d . . . . . . . 
-. . . e d e d d d f d d d . . . . . 
-. . . e d e e d d d f d d d . . . . 
-. . . e e d d d d f f f f . . . . . 
-. . . . . d d d d d d d . . . . . . 
-. . 2 2 7 7 8 7 7 7 . . . . . . . . 
-. 2 2 7 7 7 8 7 7 8 7 7 7 . . . . . 
-. 2 7 7 7 7 8 7 7 8 7 7 7 7 . . . b 
-. 2 1 1 7 8 5 8 8 5 8 7 1 1 . . b b 
-f 2 1 1 1 8 8 8 8 8 8 b b b b b b b 
-f 2 1 1 8 8 8 8 8 8 8 8 . . . . b b 
-f 2 2 2 8 8 8 8 8 8 8 8 . . . . . b 
-. . . e e e . . . . e e e . . . . . 
-. . e e e e . . . . e e e e . . . . 
+. . . . . 7 7 7 7 7 . . . . . . 
+. . . . 7 7 7 7 7 7 7 7 7 . . . 
+. . . . e e e d d f d . . . . . 
+. . . e d e d d d f d d d . . . 
+. . . e d e e d d d f d d d . . 
+. . . e e d d d d f f f f . . . 
+. . . . . d d d d d d d . . . . 
+. . 2 2 7 7 8 7 7 7 . . . . . . 
+. 2 2 7 7 7 8 7 7 8 7 7 7 . . . 
+. 2 7 7 7 7 8 7 7 8 7 7 7 7 . b 
+. 2 1 1 7 8 5 8 8 5 8 7 1 1 b b 
+f 2 1 1 1 8 8 8 8 8 8 b b b b b 
+f 2 1 1 8 8 8 8 8 8 8 8 . . b b 
+f 2 2 2 8 8 8 8 8 8 8 8 . . . b 
+. . . e e e . . . . e e e . . . 
+. . e e e e . . . . e e e e . . 
 `, SpriteKind.Player)
 let fash = sprites.create(img`
 . . . . . . . . . . . . . . . . 
@@ -301,47 +598,34 @@ d d d d d d d d d d d . . . . .
 . . . . d d d d d d d . . . . . 
 . . . . . . d d d d d . . . . . 
 `, SpriteKind.sucker)
-fash.setFlag(SpriteFlag.Invisible, true)
-sucker.setFlag(SpriteFlag.Invisible, true)
-controller.moveSprite(mySprite)
-scene.cameraFollowSprite(mySprite)
 tiles.setTilemap(tiles.createTilemap(
-            hex`10001e0002010101010101010812121212121211030a0a0a0a0a0a0a070a0a0a0a0a0a10030a0a0a0a0a0a0a090a0a0a0a0a0a10040e0e0505050505060a0a0a0a0a0a100a0a0a0a0a0a0a0a070a0a0a0a0a0a100a0a0a0a0a0a0a0a070a0a0a0a0a0a100a0a0a0a0a0a0a0a070a0a0a0a0a0a100a0a0a0a0a0a0a0a070a0a0a0a0a0a100e05050505050505060e0e0e0e130e0f0a0a0a0a0a0c0a0a0a151919191919170a0a0a0a0a0c0a0a0a151919191919170a0a0a0a0a0c0a0a0a151919191919170a0a0a0a0a0c0a0a0a181919191419170a0a0a0a0a0c0a0a0a15191919191917131313131313131313160e0e0e0e0e0e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a0d0d0d0d0d0d0d0d0d0d1100000000180c1b0c1b0c1b0c1b0c1c1000000000181b0c1b0c1b0c1b0c1b0c1010000000180c1b0c1b0c1b0c1b0c1b1000000000181b0c1b0c1b0c1b0c1b0c1000000000180c1b0c1b0c1b0c1b0c1b1000000000181b0c1b0c1b0c1b0c1b0c1000000000160e0e0e0e0e0e0e0e0e0e0f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            hex`100010000a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a020202020202020202020202020202030404040404040404040404040404040904040404040404040404040404040409010101010101010101010101040404090a0a0a0a0a0a0a0a0a0a0a0a080404090a0a0a0a0a0a0a0a0a0a0a0a080404090a0a0a0a0a0a0a0a0a0a0a0a080404090c0b0b0b0b0b0b0b0b0b0b0b0a0a0a0a0d0a0d140d130a0d0a0a120d100a0a0a0d0a0d0a0d0a0a0d0a0a0a0d0a0a0a0a0e0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f`,
             img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 . . . . 
+2 . 2 . 2 . . 2 . . . 2 . . . . 
+2 . 2 . 2 . . 2 . . . 2 . . . . 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 . . . . . . . 2 . . . . . . 2 
-2 . . . . . . . . . . . . . . 2 
-2 . . 2 2 2 2 2 2 . . . . . . 2 
-. . . . . . . . 2 . . . . . . 2 
-. . . . . . . . 2 . . . . . . 2 
-. . . . . . . . 2 . . . . . . 2 
-. . . . . . . . 2 . . . . . . 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 . . 2 
-. . . . . . . . . 2 . . . . . 2 
-. . . . . . . . . 2 . . . . . 2 
-. . . . . . . . . 2 . . . . . 2 
-. . . . . . . . . . . . . . . 2 
-. . . . . . . . . 2 . . . . . 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
-. . 2 . . . . . . . . . . 2 . . 
-. . 2 . . . . . . . . . . 2 . . 
-. . 2 . . . . . . . . . . 2 . . 
-. . 2 . . . . . . . . . . 2 . . 
-. . 2 . . . . . . . . . . 2 . . 
-. . 2 . . . . . . . . . . 2 . . 
-. . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
 `,
-            [myTiles.tile0,sprites.dungeon.purpleOuterNorth1,sprites.dungeon.purpleOuterNorthWest,sprites.dungeon.purpleOuterWest1,sprites.dungeon.purpleOuterSouthEast,sprites.dungeon.purpleOuterSouth1,sprites.dungeon.purpleOuterSouthWest,sprites.dungeon.purpleOuterEast0,sprites.dungeon.purpleOuterNorthEast,sprites.dungeon.stairLarge,sprites.dungeon.floorDark2,sprites.dungeon.floorDark4,sprites.dungeon.floorDarkDiamond,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterSouth1,sprites.dungeon.doorOpenSouth,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterWest1,sprites.dungeon.floorLight2,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.floorLight0,sprites.dungeon.floorLight5],
+            [myTiles.tile0,sprites.castle.tilePath8,sprites.castle.tilePath2,sprites.castle.tilePath3,sprites.castle.tilePath5,sprites.castle.tilePath1,sprites.castle.tilePath9,sprites.castle.tilePath7,sprites.castle.tilePath4,sprites.castle.tilePath6,myTiles.tile1,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouth0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6],
             TileScale.Sixteen
         ))
+fash.setFlag(SpriteFlag.Invisible, true)
+sucker.setFlag(SpriteFlag.Invisible, true)
+info.setLife(3)
+controller.moveSprite(mySprite)
+scene.cameraFollowSprite(mySprite)
 scene.setBackgroundColor(11)
 tiles.placeOnTile(mySprite, tiles.getTileLocation(2, 6))
 for (let value of tiles.getTilesByType(sprites.dungeon.floorDarkDiamond)) {
@@ -417,4 +701,7 @@ forever(function () {
         sucker.setFlag(SpriteFlag.Ghost, true)
         controller.moveSprite(mySprite, 100, 100)
     }
+})
+forever(function () {
+	
 })
