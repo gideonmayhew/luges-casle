@@ -190,7 +190,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.doorOpenSouth, function (
     }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorDark4, function (sprite, location) {
-    tiles.setTileAt(location, sprites.dungeon.floorLight0)
+    tiles.setTileAt(location, sprites.dungeon.floorLight5)
     for (let value of tiles.getTilesByType(sprites.dungeon.floorLight5)) {
         ghost = sprites.create(img`
 . . . . . . . 7 7 7 . . . . . . . 
@@ -215,40 +215,53 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorDark4, function (spr
         ghost.follow(mySprite, 50)
     }
 })
-sprites.onOverlap(SpriteKind.sucker, SpriteKind.boss1, function (sprite, otherSprite) {
-    if (sprites.readDataBoolean(otherSprite, "life")) {
-        otherSprite.destroy()
-        tiles.setTilemap(tiles.createTilemap(
-            hex`100010000a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a020202020202020202020202020202030404040404040404040404040404040904040404040404040404040404040409010101010101010101010101040404090a0a0a0a0a0a0a0a0a0a0a0a080404090a0a0a0a0a0a0a0a0a0a0a0a080404090a0a0a0a0a0a0a0a0a0a0a0a080404090c0b0b0b0b0b0b0b0b0b0b0b0a0a0a0a0d0a0d140d130a0d0a0a120d100a0a0a0d0a0d0a0d0a0a0d0a0a0a0d0a0a0a0a0e0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f`,
-            img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-2 2 2 2 2 2 2 2 2 2 2 2 . . . . 
-2 . 2 . 2 . . 2 . . . . . . . . 
-2 . 2 . 2 . . 2 . . . . . . . . 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-`,
-            [myTiles.tile0,sprites.castle.tilePath8,sprites.castle.tilePath2,sprites.castle.tilePath3,sprites.castle.tilePath5,sprites.castle.tilePath1,sprites.castle.tilePath9,sprites.castle.tilePath7,sprites.castle.tilePath4,sprites.castle.tilePath6,myTiles.tile1,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouth0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6],
-            TileScale.Sixteen
-        ))
-    } else {
-        pause(1000)
-        info.changeLifeBy(-2)
-    }
+sprites.onOverlap(SpriteKind.fash, SpriteKind.boss1, function (sprite, otherSprite) {
+    otherSprite.follow(mySprite, 0)
+    otherSprite.setVelocity(0, 0)
+    otherSprite.setImage(img`
+. . . . . . . . . . . . . . . . . 
+. . . . . 1 f 1 1 1 1 f . . . . . 
+. . . . . 1 1 f 1 1 f 1 . . . . . 
+. . . . . 1 1 f 1 1 f 1 1 . . . . 
+. . . . . 1 1 1 1 1 1 1 1 . . . . 
+. . . . . 1 1 f f f f 1 1 . . . . 
+. . . . . . 1 1 1 1 1 1 1 . . . . 
+. 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 . 1 1 
+1 1 . . 1 1 1 1 1 1 1 1 1 1 . 1 1 
+1 1 . . 1 1 1 1 1 1 1 1 1 . . 1 1 
+1 1 1 . 1 1 1 1 1 1 1 1 . . 1 1 1 
+. 1 1 . 1 1 1 1 1 1 . . . . 1 1 . 
+. . . . . 1 1 1 1 1 . . . . . . . 
+. . . . . . 1 1 1 1 . . . . . . . 
+. . . . . . 1 1 1 1 1 . . . . . . 
+. . . . . . . 1 1 1 1 1 . . . . . 
+`)
+    sprites.setDataBoolean(otherSprite, "life", true)
+    pause(500)
+    sprites.setDataBoolean(otherSprite, "life", false)
+    otherSprite.setImage(img`
+. . . . . . . . . . . . . . . . . 
+. . . . . 4 f 4 4 4 4 f . . . . . 
+. . . . . 4 4 f 4 4 f 4 . . . . . 
+. . . . . 4 4 f 4 4 f 4 4 . . . . 
+. . . . . 4 4 4 4 4 4 4 4 . . . . 
+. . . . . 4 4 f f f f 4 4 . . . . 
+. . . . . . 4 4 4 4 4 4 4 . . . . 
+. 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 . 4 4 
+4 4 . . 4 4 4 4 4 4 4 4 4 4 . 4 4 
+4 4 . . 4 4 4 4 4 4 4 4 4 . . 4 4 
+4 4 4 . 4 4 4 4 4 4 4 4 . . 4 4 4 
+. 4 4 . 4 4 4 4 4 4 . . . . 4 4 . 
+. . . . . 4 4 4 4 4 . . . . . . . 
+. . . . . . 4 4 4 4 . . . . . . . 
+. . . . . . 4 4 4 4 4 . . . . . . 
+. . . . . . . 4 4 4 4 4 . . . . . 
+`)
+    otherSprite.follow(mySprite, 50)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorDark1, function (sprite, location) {
-    tiles.setTileAt(location, sprites.dungeon.floorDark1)
-    game.splash("boss fight")
     for (let value of tiles.getTilesByType(sprites.dungeon.floorDark1)) {
         ghost = sprites.create(img`
 . . . . . . . . . . . . . . . . . 
@@ -271,7 +284,32 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorDark1, function (spr
 `, SpriteKind.boss1)
         tiles.placeOnTile(ghost, value)
         ghost.follow(mySprite, 50)
+        game.splash("boss fight")
     }
+    for (let value of tiles.getTilesByType(sprites.dungeon.floorLight5)) {
+        ghost = sprites.create(img`
+. . . . . . . 7 7 7 . . . . . . . 
+. . . . . . 7 7 7 7 7 . . . . . . 
+. . . . . 7 7 6 7 6 7 7 . . . . . 
+. . . . . 7 7 6 7 6 7 7 . . . . . 
+. . . . . 7 7 7 7 7 7 7 . . . . . 
+. . . . . . 7 6 6 6 7 . . . . . . 
+. . . 7 7 7 7 7 7 7 7 7 7 . . . . 
+. 7 7 7 7 7 7 7 7 7 7 7 7 7 . . . 
+7 7 . 7 7 7 7 7 7 7 7 7 7 7 7 7 . 
+7 7 . 7 7 7 7 7 7 7 7 . . . . 7 . 
+. . . 7 7 7 7 7 7 7 7 7 . . 7 7 . 
+. . . . . . 7 7 7 7 7 7 7 7 . . . 
+. . . . . . 7 7 7 7 7 7 7 7 7 . . 
+. . . . . . . . 7 7 7 7 7 7 7 . . 
+. . . . . . . . . . 7 7 7 7 7 . . 
+. . . . . . . . . . . 7 7 7 7 . . 
+. . . . . . . . . . . . . 7 7 . . 
+`, SpriteKind.ghost)
+        tiles.placeOnTile(ghost, value)
+        ghost.follow(mySprite, 50)
+    }
+    tiles.setTileAt(location, sprites.dungeon.floorDark2)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
     if (controller.A.isPressed()) {
@@ -285,10 +323,10 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . 
-2 . . . . . . . . 2 . . . . 2 2 . . . . 2 . . . . . . . . . 
-2 . . . . . . . . 2 . . . . 2 2 2 2 . . 2 . . . . . . . . . 
-2 . . . . . . . . . . . . . 2 2 2 2 . . 2 . . . . . . . . . 
-2 . . . . . . . . 2 . . . . 2 2 . . . . 2 . . . . . . . . . 
+2 . . . . . . . . 2 . . . . . . . . . . 2 . . . . . . . . . 
+2 . . . . . . . . 2 . . . . . . 2 2 . . 2 . . . . . . . . . 
+2 . . . . . . . . . . . . . . . 2 2 . . 2 . . . . . . . . . 
+2 . . . . . . . . 2 . . . . . . . . . . 2 . . . . . . . . . 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -318,43 +356,25 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location
 sprites.onOverlap(SpriteKind.Player, SpriteKind.fash, function (sprite, otherSprite) {
     if (x) {
         otherSprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . 1 1 1 1 . . . . . 
-. . . . . . 1 1 1 1 1 . . . . . 
-. . . . 1 1 1 1 1 1 1 . . . . . 
-. . 1 1 1 1 1 1 1 1 1 . . . . . 
-. 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-. 1 1 1 1 1 1 1 1 1 1 . . . . . 
-. . 1 1 1 1 1 1 1 1 1 . . . . . 
-. . . . 1 1 1 1 1 1 1 . . . . . 
-. . . . . . 1 1 1 1 1 . . . . . 
+. . 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+. . 1 1 1 1 1 1 1 1 1 
 `)
         otherSprite.image.flipX()
         otherSprite.x += -1
     } else {
         otherSprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . 1 1 1 1 . . . . . 
-. . . . . . 1 1 1 1 1 . . . . . 
-. . . . 1 1 1 1 1 1 1 . . . . . 
-. . 1 1 1 1 1 1 1 1 1 . . . . . 
-. 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-. 1 1 1 1 1 1 1 1 1 1 . . . . . 
-. . 1 1 1 1 1 1 1 1 1 . . . . . 
-. . . . 1 1 1 1 1 1 1 . . . . . 
-. . . . . . 1 1 1 1 1 . . . . . 
+. . 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+. . 1 1 1 1 1 1 1 1 1 
 `)
         otherSprite.x += 1
     }
@@ -387,14 +407,6 @@ f 2 2 2 8 8 8 8 8 8 8 8 . . . b
 . . e e e e . . . . e e e e . . 
 `)
     x = false
-})
-sprites.onOverlap(SpriteKind.Player, SpriteKind.ghost, function (sprite, otherSprite) {
-    if (sprites.readDataBoolean(otherSprite, "life")) {
-        pause(100)
-    } else {
-        pause(1000)
-        info.changeLifeBy(-1)
-    }
 })
 sprites.onOverlap(SpriteKind.fash, SpriteKind.ghost, function (sprite, otherSprite) {
     otherSprite.follow(mySprite, 0)
@@ -492,46 +504,60 @@ sprites.onOverlap(SpriteKind.sucker, SpriteKind.ghost, function (sprite, otherSp
         info.changeLifeBy(-1)
     }
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.boss1, function (sprite, otherSprite) {
+    if (sprites.readDataBoolean(otherSprite, "life")) {
+        otherSprite.destroy()
+        tiles.setTilemap(tiles.createTilemap(
+            hex`100010000a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a020202020202020202020202020202030404040404040404040404040404040904040404040404040404040404040409010101010101010101010101040404090a0a0a0a0a0a0a0a0a0a0a0a080404090a0a0a0a0a0a0a0a0a0a0a0a080404090a0a0a0a0a0a0a0a0a0a0a0a080404090c0b0b0b0b0b0b0b0b0b0b0b0a0a0a0a0d0a0d140d130a0d0a0a120d100a0a0a0d0a0d0a0d0a0a0d0a0a0a0d0a0a0a0a0e0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f`,
+            img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 . . . . 
+2 . 2 . 2 . . 2 . . . . . . . . 
+2 . 2 . 2 . . 2 . . . . . . . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`,
+            [myTiles.tile0,sprites.castle.tilePath8,sprites.castle.tilePath2,sprites.castle.tilePath3,sprites.castle.tilePath5,sprites.castle.tilePath1,sprites.castle.tilePath9,sprites.castle.tilePath7,sprites.castle.tilePath4,sprites.castle.tilePath6,myTiles.tile1,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouth0,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6],
+            TileScale.Sixteen
+        ))
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(13, 14))
+    } else if (sprite.overlapsWith(otherSprite)) {
+        pause(1000)
+        info.changeLifeBy(-2)
+    }
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.sucker, function (sprite, otherSprite) {
     if (x) {
         otherSprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . d d d d . . . . . 
-. . . . . . d d d d d . . . . . 
-. . . . d d d d d d d . . . . . 
-. . d d d d d d d d d . . . . . 
-. d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-. d d d d d d d d d d . . . . . 
-. . d d d d d d d d d . . . . . 
-. . . . d d d d d d d . . . . . 
-. . . . . . d d d d d . . . . . 
+. d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+. d d d d d d d d d d 
 `)
         otherSprite.image.flipX()
         otherSprite.x += -1
     } else {
         otherSprite.setImage(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . d d d d . . . . . 
-. . . . . . d d d d d . . . . . 
-. . . . d d d d d d d . . . . . 
-. . d d d d d d d d d . . . . . 
-. d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-. d d d d d d d d d d . . . . . 
-. . d d d d d d d d d . . . . . 
-. . . . d d d d d d d . . . . . 
-. . . . . . d d d d d . . . . . 
+. d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+. d d d d d d d d d d 
 `)
         otherSprite.x += 1
     }
@@ -563,40 +589,22 @@ f 2 2 2 8 8 8 8 8 8 8 8 . . . b
 . . e e e e . . . . e e e e . . 
 `, SpriteKind.Player)
 let fash = sprites.create(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . 1 1 1 1 . . . . . 
-. . . . . . 1 1 1 1 1 . . . . . 
-. . . . 1 1 1 1 1 1 1 . . . . . 
-. . 1 1 1 1 1 1 1 1 1 . . . . . 
-. 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-1 1 1 1 1 1 1 1 1 1 1 . . . . . 
-. 1 1 1 1 1 1 1 1 1 1 . . . . . 
-. . 1 1 1 1 1 1 1 1 1 . . . . . 
-. . . . 1 1 1 1 1 1 1 . . . . . 
-. . . . . . 1 1 1 1 1 . . . . . 
+. . 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 
+. . 1 1 1 1 1 1 1 1 1 
 `, SpriteKind.fash)
 let sucker = sprites.create(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . d d d d . . . . . 
-. . . . . . d d d d d . . . . . 
-. . . . d d d d d d d . . . . . 
-. . d d d d d d d d d . . . . . 
-. d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-d d d d d d d d d d d . . . . . 
-. d d d d d d d d d d . . . . . 
-. . d d d d d d d d d . . . . . 
-. . . . d d d d d d d . . . . . 
-. . . . . . d d d d d . . . . . 
+. d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+d d d d d d d d d d d 
+. d d d d d d d d d d 
 `, SpriteKind.sucker)
 tiles.setTilemap(tiles.createTilemap(
             hex`100010000a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a020202020202020202020202020202030404040404040404040404040404040904040404040404040404040404040409010101010101010101010101040404090a0a0a0a0a0a0a0a0a0a0a0a080404090a0a0a0a0a0a0a0a0a0a0a0a080404090a0a0a0a0a0a0a0a0a0a0a0a080404090c0b0b0b0b0b0b0b0b0b0b0b0a0a0a0a0d0a0d140d130a0d0a0a120d100a0a0a0d0a0d0a0d0a0a0d0a0a0a0d0a0a0a0a0e0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f`,
@@ -623,7 +631,7 @@ tiles.setTilemap(tiles.createTilemap(
         ))
 fash.setFlag(SpriteFlag.Invisible, true)
 sucker.setFlag(SpriteFlag.Invisible, true)
-info.setLife(3)
+info.setLife(10)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
 scene.setBackgroundColor(11)
